@@ -34,6 +34,12 @@ export default function (state = defaultState, { type, payload }) {
         cart: [...cart, { ...payload }]
       };
     }
+    case 'CHECK_IN_CART':
+    case 'CANCEL_CART':
+      return {
+        ...state,
+        cart: [],
+      };
     default:
       return state;
   }

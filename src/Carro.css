@@ -1,0 +1,19 @@
+.carro {
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    height: calc(100vh - 90px);
+}
+
+.carro .cabecera {
+    height: 100px;
+}
+
+.carro .row {
+    padding-left: 20px;
+}
+
+.carro .sized-image {
+    max-width: 120px;
+}
