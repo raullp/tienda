@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 import './NavBar.css';
 
@@ -14,7 +15,7 @@ const BodegaNavBar = ({ count, logout }) => (
         <i className="fa fa-th"></i>
       </Link>
       <Link to="/cart">
-        <span>{ count && <Badge color="danger" pill>3</Badge>}<i className="fa fa-shopping-cart"></i></span>
+        <span>{ count && <Badge color="danger" pill>{count}</Badge>}<i className="fa fa-shopping-cart"></i></span>
       </Link>
       <Link to="/login">
         <i className="fa fa-sign-out"></i>
@@ -23,4 +24,8 @@ const BodegaNavBar = ({ count, logout }) => (
   </div>
 );
 
-export default BodegaNavBar;
+const mapStateToProps = ({ reducers: { cart }}) => ({
+  count: cart.length,
+});
+
+export default connect(mapStateToProps)(BodegaNavBar);
