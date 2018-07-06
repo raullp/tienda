@@ -1,4 +1,22 @@
 .principal {
   margin-right: 150px;
   margin-left: 150px;
+  height: 100vh;
+}
+
+.catalogo {
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  height: calc(100vh - 90px);
+}
+
+.catalogo .cabecera {
+  height: 100px;
+}
+
+.catalogo .productos {
+  height: calc(100vh - 190px);
+  overflow-y: scroll;
 }
