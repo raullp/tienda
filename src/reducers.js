@@ -1,20 +1,19 @@
 import { LOGIN_SUCCESS, LOGOUT } from 'constants';
 
-export default (state={}, { type, payload }) => {
-  switch(type) {
-    case LOGIN_SUCCESS: {
-      const { user } = payload;
+export default function (state = {}, action) {
+  switch (action.type) {
+    case 'LOGIN_SUCCESS': {
+      const { user } = action.payload;
       return {
         ...state,
         user,
-      }
+      };
     }
-    case LOGOUT: {
+    case 'LOGOUT':
       return {
         ...state,
         user: null,
       };
-    }
     default:
       return state;
   }
