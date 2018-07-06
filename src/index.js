@@ -8,6 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
+import "font-awesome/css/font-awesome.css";
 
 ReactDOM.render(
   <Provider store={configureStore()}>

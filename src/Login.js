@@ -11,8 +11,6 @@ const Login = ({ history, login }) => (
         <Form
           onSubmit={event => {
             event.preventDefault();
-            console.log(login);
-            console.log(loginSuccess);
             login({ name: 'Edy Reyes Rojas', email: 'reyesrojasedy@gmail.com'});
             history.push('/');
           }}
