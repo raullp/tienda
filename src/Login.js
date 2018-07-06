@@ -12,7 +12,7 @@ const Login = ({ history, login }) => (
           onSubmit={event => {
             event.preventDefault();
             login({ name: 'Edy Reyes Rojas', email: 'reyesrojasedy@gmail.com'});
-            history.push('/');
+            history.push('/principal');
           }}
         >
           <FormGroup>

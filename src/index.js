@@ -5,6 +5,7 @@ import configureStore from './store';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import createHistory from 'history/createBrowserHistory'
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';

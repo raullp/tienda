@@ -7,15 +7,17 @@ import {
   Badge
 } from 'reactstrap';
 
+const CartBadge = ({ count }) => ( count > 0 ? <Badge color="danger" pill>{count}</Badge> : null);
+
 const BodegaNavBar = ({ count, logout }) => (
   <div className="nav-bar">
     <span>La Bodega</span>
     <span className="pull-right">
-      <Link to="/">
+      <Link to="/principal">
         <i className="fa fa-th"></i>
       </Link>
       <Link to="/cart">
-        <span>{ count && <Badge color="danger" pill>{count}</Badge>}<i className="fa fa-shopping-cart"></i></span>
+        <span><CartBadge count={count} /><i className="fa fa-shopping-cart"></i></span>
       </Link>
       <Link to="/login">
         <i className="fa fa-sign-out"></i>

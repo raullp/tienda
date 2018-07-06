@@ -24,7 +24,7 @@ class Catalogo extends React.Component {
     const filter = e.target.value;
     let productos = this.props.productos;
     if (filter) {
-      productos = productos.filter(p => p.name.toLowerCase().includes(filter));
+      productos = productos.filter(p => p.name.toLowerCase().includes(filter.toLowerCase()));
     }
     this.setState({ productos });
   };

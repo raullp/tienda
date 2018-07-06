@@ -32,8 +32,8 @@ const Carro = ({ productos, total, pagar, cancelar, history }) => (
         </Row>
         <Row>
           <ButtonGroup>
-            <Button onClick={() => pagar() && history.push('/')}>Cancelar</Button>
-            <Button onClick={() => cancelar() && history.push('/')}>Pagar</Button>
+            <Button onClick={() => pagar() && history.push('/principal')}>Cancelar</Button>
+            <Button onClick={() => cancelar() && history.push('/principal')}>Pagar</Button>
           </ButtonGroup>
         </Row>
       </Col>
